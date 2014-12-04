@@ -12,6 +12,7 @@
 
 @property CGRect selectedCellsLabelPosition;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -54,10 +55,14 @@
     CGRect startFrame = self.startingPosition;
     startFrame.origin.y += [UIApplication sharedApplication].statusBarFrame.size.height + 44;
 
-    self.selectedCellsLabelPosition = CGRectMake(155, 10, self.titleLabel.frame.size.width, self.titleLabel.frame.size.height);
+    self.selectedCellsLabelPosition = CGRectMake(142.5, 147, self.titleLabel.frame.size.width, self.titleLabel.frame.size.height);
 
     CGRect endLabelFrame = self.titleLabel.frame;
     self.titleLabel.frame = self.selectedCellsLabelPosition;
+
+    CGRect imagePosition = CGRectMake(0, 0, self.imageView.frame.size.width, self.imageView.frame.size.height);
+    CGRect endImageFrame = self.imageView.frame;
+    self.imageView.frame = imagePosition;
 
     NSLog(@"Starting Frame: x:%f y:%f width:%f height:%f", startFrame.origin.x, startFrame.origin.y, startFrame.size.width, startFrame.size.height);
     CGRect endFrame = self.view.frame;
@@ -65,14 +70,14 @@
     self.view.frame = startFrame;
 
 
-    [UIView animateWithDuration:0.5f
+    [UIView animateWithDuration:0.3f
                           delay:0
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^(void)
      {
          self.view.frame = endFrame;
          self.titleLabel.frame = endLabelFrame;
-
+         self.imageView.frame = endImageFrame;
      }
                      completion:NULL];
 }
