@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		3419BFAE1A30DA80005CF9BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3419BFAD1A30DA80005CF9BE /* main.m */; };
 		3419BFB11A30DA80005CF9BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3419BFB01A30DA80005CF9BE /* AppDelegate.m */; };
-		3419BFB41A30DA80005CF9BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3419BFB31A30DA80005CF9BE /* ViewController.m */; };
+		3419BFB41A30DA80005CF9BE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3419BFB31A30DA80005CF9BE /* MainViewController.m */; };
 		3419BFB71A30DA80005CF9BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3419BFB51A30DA80005CF9BE /* Main.storyboard */; };
 		3419BFB91A30DA80005CF9BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3419BFB81A30DA80005CF9BE /* Images.xcassets */; };
 		3419BFBC1A30DA80005CF9BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3419BFBA1A30DA80005CF9BE /* LaunchScreen.xib */; };
 		3419BFC81A30DA80005CF9BE /* View_Transitions_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3419BFC71A30DA80005CF9BE /* View_Transitions_ExampleTests.m */; };
+		3419BFD31A30DE71005CF9BE /* TransitionOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3419BFD21A30DE71005CF9BE /* TransitionOneViewController.m */; };
+		3419BFD61A30DE82005CF9BE /* TransitionTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3419BFD51A30DE82005CF9BE /* TransitionTwoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		3419BFAD1A30DA80005CF9BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3419BFAF1A30DA80005CF9BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3419BFB01A30DA80005CF9BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3419BFB21A30DA80005CF9BE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3419BFB31A30DA80005CF9BE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3419BFB21A30DA80005CF9BE /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		3419BFB31A30DA80005CF9BE /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		3419BFB61A30DA80005CF9BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3419BFB81A30DA80005CF9BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3419BFBB1A30DA80005CF9BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3419BFC11A30DA80005CF9BE /* View Transitions ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "View Transitions ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3419BFC61A30DA80005CF9BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3419BFC71A30DA80005CF9BE /* View_Transitions_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = View_Transitions_ExampleTests.m; sourceTree = "<group>"; };
+		3419BFD11A30DE71005CF9BE /* TransitionOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionOneViewController.h; sourceTree = "<group>"; };
+		3419BFD21A30DE71005CF9BE /* TransitionOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionOneViewController.m; sourceTree = "<group>"; };
+		3419BFD41A30DE82005CF9BE /* TransitionTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionTwoViewController.h; sourceTree = "<group>"; };
+		3419BFD51A30DE82005CF9BE /* TransitionTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionTwoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +89,12 @@
 			children = (
 				3419BFAF1A30DA80005CF9BE /* AppDelegate.h */,
 				3419BFB01A30DA80005CF9BE /* AppDelegate.m */,
-				3419BFB21A30DA80005CF9BE /* ViewController.h */,
-				3419BFB31A30DA80005CF9BE /* ViewController.m */,
+				3419BFB21A30DA80005CF9BE /* MainViewController.h */,
+				3419BFB31A30DA80005CF9BE /* MainViewController.m */,
+				3419BFD11A30DE71005CF9BE /* TransitionOneViewController.h */,
+				3419BFD21A30DE71005CF9BE /* TransitionOneViewController.m */,
+				3419BFD41A30DE82005CF9BE /* TransitionTwoViewController.h */,
+				3419BFD51A30DE82005CF9BE /* TransitionTwoViewController.m */,
 				3419BFB51A30DA80005CF9BE /* Main.storyboard */,
 				3419BFB81A30DA80005CF9BE /* Images.xcassets */,
 				3419BFBA1A30DA80005CF9BE /* LaunchScreen.xib */,
@@ -219,8 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3419BFB41A30DA80005CF9BE /* ViewController.m in Sources */,
+				3419BFD31A30DE71005CF9BE /* TransitionOneViewController.m in Sources */,
+				3419BFB41A30DA80005CF9BE /* MainViewController.m in Sources */,
 				3419BFB11A30DA80005CF9BE /* AppDelegate.m in Sources */,
+				3419BFD61A30DE82005CF9BE /* TransitionTwoViewController.m in Sources */,
 				3419BFAE1A30DA80005CF9BE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

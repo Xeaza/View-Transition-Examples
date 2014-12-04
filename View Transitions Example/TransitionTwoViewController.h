@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TransitionTwoViewController.h
 //  View Transitions Example
 //
 //  Created by Taylor Wright-Sanson on 12/4/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TransitionTwoViewController : UIViewController
 
 @end
-
