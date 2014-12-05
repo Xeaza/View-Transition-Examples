@@ -40,7 +40,7 @@
     CGRect topImageViewStartFrame = CGRectMake(startFrame.origin.x, -startFrame.origin.y, startFrame.size.width, startFrame.size.height);
     startFrame.origin.y += [UIApplication sharedApplication].statusBarFrame.size.height + 44;
 
-    CGRect topEndFrame = CGRectMake(0, -self.imageView.frame.size.height - 10, self.topImageView.frame.size.width, self.topImageView.frame.size.height);
+    CGRect topEndFrame = CGRectMake(0, -self.imageView.frame.size.height, self.topImageView.frame.size.width, self.topImageView.frame.size.height);
     self.topImageView.frame = topImageViewStartFrame;
     [self.view addSubview:self.topImageView];
 
@@ -66,7 +66,7 @@
     [UIView animateWithDuration:0.5f delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^(void)
      {
          self.view.frame = endFrame;
-         self.topImageView.frame = firstEndTopImageFrame;
+         self.topImageView.frame = topEndFrame; //firstEndTopImageFrame;
          self.imageView.frame = endImageViewFrame;
          //self.topImageView.alpha = 0.0;
          self.bottomImageView.frame = bottomEndFrame;
@@ -75,7 +75,7 @@
          // your own completion code
 
          [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-             self.topImageView.frame = topEndFrame;
+             //self.topImageView.frame = topEndFrame;
          } completion:^(BOOL finished) {
              [self.topImageView removeFromSuperview];
         }];
