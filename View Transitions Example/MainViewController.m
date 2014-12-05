@@ -43,8 +43,13 @@
         CGRect selectedCellRect = [self.tableView rectForRowAtIndexPath:self.selectedIndexPath];
         transitionTwoViewController.startingPosition = selectedCellRect;
 
+        // Make rect to take screenshot of the content above the selected cell
         CGRect topRect = CGRectMake(0, 0, selectedCellRect.size.width, selectedCellRect.origin.y);
         transitionTwoViewController.topImageView = [self screenshotImageViewWithCroppingRect:topRect];
+
+        // Make rect to take screenshot of the content below the selected cell
+        CGRect bottomRect = CGRectMake(0, selectedCellRect.origin.y + selectedCellRect.size.height, selectedCellRect.size.width, self.view.frame.size.height - selectedCellRect.size.height);
+        transitionTwoViewController.bottomImageView = [self screenshotImageViewWithCroppingRect:bottomRect];
     }
 }
 
