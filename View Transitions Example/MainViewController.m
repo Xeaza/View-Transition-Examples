@@ -30,26 +30,57 @@
 {
     [super prepareForSegue:segue sender:sender];
 
-    if ([segue.identifier isEqualToString:@"TransitionOneSegue"]) {
-
+    if ([segue.identifier isEqualToString:@"TransitionOneSegue"])
+    {
         TransitionOneViewController *transitionOneViewController = segue.destinationViewController;
-
         transitionOneViewController.modalPresentationStyle = UIModalPresentationCustom;
         transitionOneViewController.startingPosition = [self.tableView rectForRowAtIndexPath:self.selectedIndexPath];
     }
+    else if ([segue.identifier isEqualToString:@"TransitionTwoSegue"])
+    {
+        TransitionTwoViewController *transitionTwoViewController = segue.destinationViewController;
+        transitionTwoViewController.modalPresentationStyle = UIModalPresentationCustom;
+        CGRect selectedCellRect = [self.tableView rectForRowAtIndexPath:self.selectedIndexPath];
+        transitionTwoViewController.startingPosition = selectedCellRect;
 
+        CGRect topRect = CGRectMake(0, 0, selectedCellRect.size.width, selectedCellRect.origin.y);
+        transitionTwoViewController.topImageView = [self screenshotImageViewWithCroppingRect:topRect];
+    }
 }
 
 #pragma mark - Table View
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-        self.selectedIndexPath = indexPath;
-        return indexPath;
-    }
+    self.selectedIndexPath = indexPath;
     return indexPath;
 }
+
+#pragma mark - Screenshot 
+
+- (UIImageView *)screenshotImageViewWithCroppingRect:(CGRect)croppingRect
+{
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
+        UIGraphicsBeginImageContextWithOptions(croppingRect.size, YES, [UIScreen mainScreen].scale);
+    } else {
+        UIGraphicsBeginImageContext(croppingRect.size);
+    }
+
+    // Create a graphics context and translate it the view we want to crop so
+    // that even in grabbing (0,0), that origin point now represents the actual
+    // cropping origin desired:
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextTranslateCTM(ctx, -croppingRect.origin.x, -croppingRect.origin.y);
+    [self.view.layer renderInContext:ctx];
+
+    // Retrieve a UIImage from the current image context:
+    UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    // Return the image in a UIImageView:
+    return [[UIImageView alloc] initWithImage:snapshotImage];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
