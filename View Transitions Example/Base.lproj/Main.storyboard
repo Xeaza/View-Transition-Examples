@@ -88,11 +88,11 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overboard" translatesAutoresizingMaskIntoConstraints="NO" id="Wtk-Fo-LuD">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="172"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transition 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teT-Y4-akB">
-                                                    <rect key="frame" x="34" y="143" width="136" height="29"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not a transition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teT-Y4-akB">
+                                                    <rect key="frame" x="34" y="143" width="169" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="29" id="6zf-iQ-UC5"/>
-                                                        <constraint firstAttribute="width" constant="136" id="gBf-0i-Dpk"/>
+                                                        <constraint firstAttribute="width" constant="169" id="gBf-0i-Dpk"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,19 +109,19 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransitionTwoCell" rowHeight="173" id="EJk-Fo-rlz">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransitionTwoCell" rowHeight="173" id="J7o-0z-uCz">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EJk-Fo-rlz" id="yK1-LW-Ktl">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J7o-0z-uCz" id="jpH-KK-zBi">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overboard" translatesAutoresizingMaskIntoConstraints="NO" id="DVy-uk-ojZ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overboard" translatesAutoresizingMaskIntoConstraints="NO" id="8ko-9i-BJh">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="172"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transition 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfZ-pm-RZP">
-                                                    <rect key="frame" x="34" y="143" width="136" height="29"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not a transition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ig7-Ox-stj">
+                                                    <rect key="frame" x="34" y="143" width="169" height="29"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="136" id="acq-dc-Yk7"/>
-                                                        <constraint firstAttribute="height" constant="29" id="rhX-1I-d3z"/>
+                                                        <constraint firstAttribute="height" constant="29" id="fW3-J8-DXn"/>
+                                                        <constraint firstAttribute="width" constant="169" id="gVf-hm-rcx"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -129,12 +129,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="pfZ-pm-RZP" secondAttribute="bottom" constant="-7.5" id="5Ye-Gv-GM8"/>
-                                                <constraint firstAttribute="bottom" secondItem="DVy-uk-ojZ" secondAttribute="bottom" constant="0.5" id="8Za-uL-0Od"/>
-                                                <constraint firstItem="DVy-uk-ojZ" firstAttribute="top" secondItem="yK1-LW-Ktl" secondAttribute="top" id="Awe-3w-1MC"/>
-                                                <constraint firstItem="DVy-uk-ojZ" firstAttribute="leading" secondItem="yK1-LW-Ktl" secondAttribute="leading" id="Drw-7e-McU"/>
-                                                <constraint firstAttribute="trailing" secondItem="DVy-uk-ojZ" secondAttribute="trailing" id="F0Q-Y0-QKn"/>
-                                                <constraint firstItem="pfZ-pm-RZP" firstAttribute="leading" secondItem="yK1-LW-Ktl" secondAttribute="leadingMargin" constant="26" id="eJQ-M5-8m5"/>
+                                                <constraint firstAttribute="trailing" secondItem="8ko-9i-BJh" secondAttribute="trailing" id="HJK-aJ-5fc"/>
+                                                <constraint firstItem="ig7-Ox-stj" firstAttribute="leading" secondItem="jpH-KK-zBi" secondAttribute="leadingMargin" constant="26" id="Kgs-aG-gQ1"/>
+                                                <constraint firstItem="8ko-9i-BJh" firstAttribute="top" secondItem="jpH-KK-zBi" secondAttribute="top" id="XIy-kO-8Wy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ig7-Ox-stj" secondAttribute="bottom" constant="-7.5" id="cpP-5R-Ma6"/>
+                                                <constraint firstAttribute="bottom" secondItem="8ko-9i-BJh" secondAttribute="bottom" constant="0.5" id="eAk-c1-4MI"/>
+                                                <constraint firstItem="8ko-9i-BJh" firstAttribute="leading" secondItem="jpH-KK-zBi" secondAttribute="leading" id="raE-aK-aUp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
