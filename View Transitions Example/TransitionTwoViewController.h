@@ -12,5 +12,7 @@
 
 @property (nonatomic, assign) CGRect startingPosition;
 @property (nonatomic, strong) UIImageView *topImageView;
+@property (nonatomic, strong) UIImageView *bottomImageView;
+
 
 @end

@@ -35,38 +35,41 @@
 - (void)animateOnEntry
 {
     CGRect startFrame = self.startingPosition;
+
+    // Top part of view to animate up and out of view
     CGRect topImageViewStartFrame = CGRectMake(startFrame.origin.x, -startFrame.origin.y, startFrame.size.width, startFrame.size.height);
     startFrame.origin.y += [UIApplication sharedApplication].statusBarFrame.size.height + 44;
 
     CGRect topEndFrame = CGRectMake(0, -self.imageView.frame.size.height - 10, self.topImageView.frame.size.width, self.topImageView.frame.size.height);
-
     self.topImageView.frame = topImageViewStartFrame;
-   // NSLog(@"%f %f %f %f", self.startingPosition.origin.x, -self.startingPosition.origin.y, self.startingPosition.size.width, self.startingPosition.size.height);
+    [self.view addSubview:self.topImageView];
 
+    // Selected cell image to animate up
     CGRect imagePosition = CGRectMake(0, 0, self.imageView.frame.size.width, self.imageView.frame.size.height);
     CGRect endImageViewFrame = self.imageView.frame;
     self.imageView.frame = imagePosition;
-    //NSLog(@"%f %f %f %f", imagePosition.origin.x, imagePosition.origin.y, imagePosition.size.width, imagePosition.size.height);
 
     CGRect firstEndTopImageFrame = CGRectMake(endImageViewFrame.origin.x, endImageViewFrame.origin.y - endImageViewFrame.size.height, self.topImageView.frame.size.width, self.topImageView.frame.size.height);
 
-    [self.view addSubview:self.topImageView];
-    //startFrame.origin.y += [UIApplication sharedApplication].statusBarFrame.size.height + 44;
-    //startFrame.origin.y -= 110;
     CGRect endFrame = self.view.frame;
     self.view.frame = startFrame;
 
-    //[self.view addSubview:self.topImageView];
+    // Bottom Half of screen to animate down and out of view
+    CGRect bottomEndFrame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height, self.bottomImageView.frame.size.width, self.bottomImageView.frame.size.height);
+    CGRect bottomStartFrame = CGRectMake(startFrame.origin.x, self.startingPosition.origin.y, self.bottomImageView.frame.size.width, self.bottomImageView.frame.size.height);
+    self.bottomImageView.frame = bottomStartFrame;
+
+    [self.view addSubview:self.bottomImageView];
 
     self.titleLabel.alpha = 0.0;
-   // NSLog(@"Starting Frame: x:%f y:%f width:%f height:%f", startFrame.origin.x, startFrame.origin.y, startFrame.size.width, startFrame.size.height);
 
-    [UIView animateWithDuration:0.6f delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^(void)
+    [UIView animateWithDuration:0.5f delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^(void)
      {
          self.view.frame = endFrame;
          self.topImageView.frame = firstEndTopImageFrame;
          self.imageView.frame = endImageViewFrame;
          //self.topImageView.alpha = 0.0;
+         self.bottomImageView.frame = bottomEndFrame;
 
      } completion:^(BOOL finished) {
          // your own completion code
