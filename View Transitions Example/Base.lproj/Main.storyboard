@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="2337" y="-1151"/>
         </scene>
-        <!--View Controller-->
+        <!--Transition Two View Controller-->
         <scene sceneID="kTR-WO-fKI">
             <objects>
-                <viewController id="Xkc-w1-mfZ" sceneMemberID="viewController">
+                <viewController id="Xkc-w1-mfZ" customClass="TransitionTwoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q24-Hu-wRz"/>
                         <viewControllerLayoutGuide type="bottom" id="Cgd-tj-828"/>
@@ -173,7 +173,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.20392156859999999" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="3qC-xi-JPY" firstAttribute="leading" secondItem="de9-tb-klj" secondAttribute="leadingMargin" constant="-16" id="1hP-k5-dg3"/>
                             <constraint firstItem="Tln-Qb-sRk" firstAttribute="top" secondItem="de9-tb-klj" secondAttribute="topMargin" constant="14" id="GFF-1r-jPu"/>
@@ -182,6 +182,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="3qC-xi-JPY" secondAttribute="trailing" constant="-16" id="enA-hh-M07"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="3qC-xi-JPY" id="YXg-fh-7P2"/>
+                        <outlet property="titleLabel" destination="Tln-Qb-sRk" id="efL-0o-g0f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYD-Go-q1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
