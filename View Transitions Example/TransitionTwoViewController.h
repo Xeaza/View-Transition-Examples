@@ -10,4 +10,7 @@
 
 @interface TransitionTwoViewController : UIViewController
 
+@property (nonatomic, assign) CGRect startingPosition;
+@property (nonatomic, strong) UIImageView *topImageView;
+
 @end
