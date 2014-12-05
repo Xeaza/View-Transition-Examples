@@ -83,7 +83,10 @@
 
 }
 
-
+- (IBAction)onBackButtonPressed:(id)sender
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

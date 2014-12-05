@@ -29,6 +29,11 @@
     [self animateOnEntry];
 }
 
+- (IBAction)onBackButtonPressed:(id)sender
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
 //-(IBAction)doneWasPressed:(id)sender {
 //    //animation on EXIT FROM CURRENT VIEW
 //    self.view.translatesAutoresizingMaskIntoConstraints = NO;
