@@ -61,11 +61,12 @@
     self.titleLabel.alpha = 0.0;
    // NSLog(@"Starting Frame: x:%f y:%f width:%f height:%f", startFrame.origin.x, startFrame.origin.y, startFrame.size.width, startFrame.size.height);
 
-    [UIView animateWithDuration:3.0f delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^(void)
+    [UIView animateWithDuration:0.6f delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^(void)
      {
          self.view.frame = endFrame;
          self.topImageView.frame = firstEndTopImageFrame;
          self.imageView.frame = endImageViewFrame;
+         //self.topImageView.alpha = 0.0;
 
      } completion:^(BOOL finished) {
          // your own completion code
