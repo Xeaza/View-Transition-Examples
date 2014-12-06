@@ -84,10 +84,33 @@
 
 - (IBAction)onBackButtonPressed:(UIButton *)backButton
 {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    //animation on EXIT FROM CURRENT VIEW
+    self.view.translatesAutoresizingMaskIntoConstraints = NO;
+
     [UIView animateWithDuration:0.3 animations:^{
         backButton.alpha = 0.0;
     }];
+
+    [self.view addSubview:self.topImageView];
+    [UIView animateWithDuration:0.5f delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^(void)
+     {
+         CGRect startFrame = self.startingPosition;
+         startFrame.origin.y += [UIApplication sharedApplication].statusBarFrame.size.height + 44;
+
+         // Animate top image down
+         CGRect topImageEndingFrame = CGRectMake(0, self.topImageView.frame.origin.y - 2, self.topImageView.frame.size.width, self.topImageView.frame.size.height);
+         self.topImageView.frame = topImageEndingFrame;
+
+         // Move imageView to y = 0
+         CGRect imageViewRrect = CGRectMake(0, 0, self.imageView.frame.size.width, self.imageView.frame.size.height);
+         self.imageView.frame = imageViewRrect;
+
+         self.view.frame = startFrame;
+     }
+                     completion:^(BOOL finished)
+     {
+         [self.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+     }];
 }
 
 - (void)didReceiveMemoryWarning {
