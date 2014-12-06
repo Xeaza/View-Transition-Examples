@@ -78,6 +78,7 @@
              //self.topImageView.frame = topEndFrame;
          } completion:^(BOOL finished) {
              [self.topImageView removeFromSuperview];
+             [self.bottomImageView removeFromSuperview];
         }];
      }];
 }
@@ -116,6 +117,8 @@
                      completion:^(BOOL finished)
      {
          [self.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+         [self.topImageView removeFromSuperview];
+         [self.bottomImageView removeFromSuperview];
      }];
 }
 
