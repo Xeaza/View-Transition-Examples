@@ -80,12 +80,14 @@
              [self.topImageView removeFromSuperview];
         }];
      }];
-
 }
 
-- (IBAction)onBackButtonPressed:(id)sender
+- (IBAction)onBackButtonPressed:(UIButton *)backButton
 {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    [UIView animateWithDuration:0.3 animations:^{
+        backButton.alpha = 0.0;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
