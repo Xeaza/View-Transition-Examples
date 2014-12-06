@@ -92,6 +92,8 @@
     }];
 
     [self.view addSubview:self.topImageView];
+    [self.view addSubview:self.bottomImageView];
+
     [UIView animateWithDuration:0.5f delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^(void)
      {
          CGRect startFrame = self.startingPosition;
@@ -104,6 +106,10 @@
          // Move imageView to y = 0
          CGRect imageViewRrect = CGRectMake(0, 0, self.imageView.frame.size.width, self.imageView.frame.size.height);
          self.imageView.frame = imageViewRrect;
+
+         // Animate bottom image up
+         CGRect bottomImageRect = CGRectMake(0, self.imageView.frame.size.height, self.bottomImageView.frame.size.width, self.bottomImageView.frame.size.height);
+         self.bottomImageView.frame = bottomImageRect;
 
          self.view.frame = startFrame;
      }
