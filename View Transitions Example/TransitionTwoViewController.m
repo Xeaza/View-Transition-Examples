@@ -25,11 +25,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    //self.imageView.alpha = 0.0;
-    //self.titleLabel.alpha = 0.0;
     [self animateOnEntry];
-
-   // self.view.backgroundColor = [UIColor clearColor];
 }
 
 - (void)animateOnEntry
